@@ -6,6 +6,7 @@ import ProductListFunctional from './ProductListFunctional';
 import ProductListClass from './ProductListClass';
 import Product from './Product';
 import Title from './Title';
+import "./Main.css";
 
 export default class Main extends React.Component { // exporting Main component
 
@@ -27,11 +28,17 @@ export default class Main extends React.Component { // exporting Main component
 
     render() { // Class component lifecycle to render data
         console.log("Render lifecycle 2");
+        const myStyle = {
+            backgroundColor: "blue",
+            color: "white",
+            textAlign: "center"
+        }
         return <>
-            <h1>Main Class Component</h1>
+            <h1 style={myStyle}>Main Class Component</h1>
+            <h2 className='header'>External CSS Example</h2>
             <ProductListClass />
             <hr />
-            <h2>State username is {this.state.username}</h2>
+            <h2 style={{ backgroundColor: "yellow" }}>State username is {this.state.username}</h2>
             <button onClick={this.updateUsername}>Update Username</button>
             <hr />
             <Welcome username={this.state.username} />
