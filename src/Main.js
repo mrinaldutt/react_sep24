@@ -37,13 +37,14 @@ export default class Main extends React.Component { // exporting Main component
             <h1 style={myStyle}>Main Class Component</h1>
             <h2 className='header'>External CSS Example</h2>
             <ProductListClass />
+            <ProductListFunctional />
             <hr />
-            <h2 style={{ backgroundColor: "yellow" }}>State username is {this.state.username}</h2>
+            <h2 style={{ backgroundColor: "yellow" }}>State Example - username is {this.state.username}</h2>
             <button onClick={this.updateUsername}>Update Username</button>
+            <h3>Props Example - He is having mobile {this.props.mobileProps}</h3>
             <hr />
             <Welcome username={this.state.username} />
-            <AddProduct />
-            <ProductListFunctional />
+            <AddProduct /> 
             <Product />
             <Title username={this.state.username} />
         </>

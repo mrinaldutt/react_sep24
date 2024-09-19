@@ -60,7 +60,7 @@ export default class ProductListClass extends React.Component {
     }
     render() {
         return <>
-        <h1>Product Name</h1>
+         <h1>Class Component - Product Name</h1>
         <ul>
             {
                 this.state.products.map((item, index) => (

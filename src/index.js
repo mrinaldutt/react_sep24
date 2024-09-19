@@ -30,7 +30,8 @@ const birth = { // object
     year: 2000,
     place: "Kanpur"
 };
+const mobile = "iPhone";
 
 root.render(
-  <Main username={username} interests={interests} birth={birth} />
+  <Main mobileProps={mobile} username={username} interests={interests} birth={birth} />
 );
