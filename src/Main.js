@@ -9,15 +9,17 @@ import Title from './Title';
 
 export default class Main extends React.Component { // exporting Main component
 
-    constructor() { // Class component lifecycle
-        super();
+    constructor(props) { // Class component lifecycle
+        super(props);
         this.state = { // To define state in class component, we use this.state
             username: "Soumit"
         }
         console.log("Constructor lifecycle 1");
+        console.log("Main class component props is", this.props);
     }
 
     updateUsername = () => {
+        console.log("UpdateUsername function", this.props);
         this.setState({ // To update State we use this.setState, whenever state update component rerender
             username: "Siva"
         })
@@ -32,11 +34,11 @@ export default class Main extends React.Component { // exporting Main component
             <h2>State username is {this.state.username}</h2>
             <button onClick={this.updateUsername}>Update Username</button>
             <hr />
-            <Welcome />
+            <Welcome username={this.state.username} />
             <AddProduct />
             <ProductListFunctional />
             <Product />
-            <Title />
+            <Title username={this.state.username} />
         </>
     }
 }

@@ -24,6 +24,13 @@ const nestedItem2 = <ul>
   }
 </ul>
 
+const username = "Jitendra"; // string
+const interests = ["Playing Cricket", "Watching Movies", "Playing with Kids"]; // array
+const birth = { // object
+    year: 2000,
+    place: "Kanpur"
+};
+
 root.render(
-  <Main />
+  <Main username={username} interests={interests} birth={birth} />
 );
