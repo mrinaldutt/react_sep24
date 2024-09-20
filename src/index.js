@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom/client'; // builtin module
 import React from 'react';
 import Main from './Main'; // Importing Main Class Component
+import 'bootstrap/dist/css/bootstrap.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root')); // root id is defined inside index.html file
 
