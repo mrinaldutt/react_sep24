@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Product from './Product';
 export default function ProductListFunctional() {
 
     let products = [
@@ -62,6 +63,7 @@ export default function ProductListFunctional() {
 
     return <>
         <h1>Functional Component - Product Name</h1>
+        <Product />
         <ul>
             {
                 data.map((item, index) => (

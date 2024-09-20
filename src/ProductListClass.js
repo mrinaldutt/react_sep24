@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Product from './Product';
 export default class ProductListClass extends React.Component {
     constructor() {
         super();
@@ -60,13 +60,14 @@ export default class ProductListClass extends React.Component {
     }
     render() {
         return <>
-         <h1>Class Component - Product Name</h1>
-        <ul>
-            {
-                this.state.products.map((item, index) => (
-                    <li key={index}>{item.productName}</li>
-                ))
-            }
-        </ul></>
+            <h1>Class Component - Product Name</h1>
+            <Product />
+            <ul>
+                {
+                    this.state.products.map((item, index) => (
+                        <li key={index}>{item.productName}</li>
+                    ))
+                }
+            </ul></>
     }
 }

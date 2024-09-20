@@ -1,11 +1,34 @@
 import React from 'react';
+import "./Welcome.css";
 
 export default class Welcome extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
+        this.state = { // To define state in class component, we use this.state
+            username: "Jitendra"
+        }
         console.log("Welcome class component props is", this.props)
     }
+
+    updateUsername = () => {
+        console.log("UpdateUsername function", this.props);
+        this.setState({ // To update State we use this.setState, whenever state update component rerender
+            username: "Siva"
+        })
+    }
+
     render() {
-        return <h1>Welcome Class Component</h1>
+        const myStyle = {
+            backgroundColor: "blue",
+            color: "white",
+            textAlign: "center"
+        }
+        return <>
+            <h1 style={myStyle}>Welcome Class Component</h1>
+            <h2 className='header'>External CSS Example</h2>
+            <h2 style={{ backgroundColor: "yellow" }}>State Example - username is {this.state.username}</h2>
+            <button onClick={this.updateUsername}>Update Username</button>
+            <h3>Props Example - He is having mobile {this.props.mobileProps}</h3>
+        </>
     }
 }
