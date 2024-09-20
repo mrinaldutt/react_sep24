@@ -1,5 +1,7 @@
 import React from 'react';
 import Product from './Product';
+import { Link } from 'react-router-dom';
+
 export default class ProductListClass extends React.Component {
     constructor() {
         super();
@@ -65,7 +67,7 @@ export default class ProductListClass extends React.Component {
             <ul>
                 {
                     this.state.products.map((item, index) => (
-                        <li key={index}>{item.productName}</li>
+                        <li key={index}><Link to={`/products/${item.productId}`}>{item.productName}</Link></li>
                     ))
                 }
             </ul></>
