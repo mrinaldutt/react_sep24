@@ -10,6 +10,10 @@ export default class Welcome extends React.Component {
         console.log("Welcome class component props is", this.props)
     }
 
+    shouldComponentUpdate() {
+        return true;
+    }
+
     updateUsername = () => {
         console.log("UpdateUsername function", this.props);
         this.setState({ // To update State we use this.setState, whenever state update component rerender

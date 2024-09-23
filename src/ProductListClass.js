@@ -59,7 +59,13 @@ export default class ProductListClass extends React.Component {
                 }
             ]
         }
+        console.log("ProductListClass constructor");
     }
+
+    componentWillUnmount(){
+        console.log("ProductListClass componentWillUnmount");
+    }
+
     render() {
         return <>
             <h1>Class Component - Product Name</h1>

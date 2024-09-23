@@ -23,6 +23,12 @@ function Nav() {
                         <li className="nav-item">
                             <Link className="nav-link" to="/productsfunctional">Product Functional</Link>
                         </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/usersfunctional">Users Functional</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/usersclass">Users Class</Link>
+                        </li>
                     </ul>
 
                 </div>

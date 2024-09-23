@@ -8,6 +8,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Nav from './Nav';
 import NotFound from './NotFound';
 import ProductDetail from './ProductDetail';
+import UserList from './Userlist';
+import UserListClass from './UserListClass';
 
 export default class Main extends React.Component { // exporting Main component
 
@@ -34,6 +36,8 @@ export default class Main extends React.Component { // exporting Main component
                         <Route path="/productsclass" element={<ProductListClass/>}></Route>
                         <Route path="/productsfunctional" element={<ProductListFunctional/>}></Route>
                         <Route path="/products/:id" element={<ProductDetail/>}></Route>
+                        <Route path="/usersfunctional" element={<UserList/>}></Route>
+                        <Route path="/usersclass" element={<UserListClass/>}></Route>
                         <Route path="*" element={<NotFound/>}></Route>
                     </Route>
                 </Routes>
