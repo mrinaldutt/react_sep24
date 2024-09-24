@@ -10,6 +10,7 @@ import NotFound from './NotFound';
 import ProductDetail from './ProductDetail';
 import UserList from './Userlist';
 import UserListClass from './UserListClass';
+import Books from './Books';
 
 export default class Main extends React.Component { // exporting Main component
 
@@ -33,12 +34,13 @@ export default class Main extends React.Component { // exporting Main component
                         <Route path="/title" username={this.state.username} element={<Title />}></Route>
                         <Route path="/welcome" username={this.state.username} element={<Welcome />}></Route>
                         <Route path="/addproduct" element={<AddProduct />}></Route>
-                        <Route path="/productsclass" element={<ProductListClass/>}></Route>
-                        <Route path="/productsfunctional" element={<ProductListFunctional/>}></Route>
-                        <Route path="/products/:id" element={<ProductDetail/>}></Route>
-                        <Route path="/usersfunctional" element={<UserList/>}></Route>
-                        <Route path="/usersclass" element={<UserListClass/>}></Route>
-                        <Route path="*" element={<NotFound/>}></Route>
+                        <Route path="/productsclass" element={<ProductListClass />}></Route>
+                        <Route path="/productsfunctional" element={<ProductListFunctional />}></Route>
+                        <Route path="/products/:id" element={<ProductDetail />}></Route>
+                        <Route path="/usersfunctional" element={<UserList />}></Route>
+                        <Route path="/usersclass" element={<UserListClass />}></Route>
+                        <Route path="/books" element={<Books />}></Route>
+                        <Route path="*" element={<NotFound />}></Route>
                     </Route>
                 </Routes>
             </BrowserRouter>
